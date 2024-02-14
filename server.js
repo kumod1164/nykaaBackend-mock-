@@ -8,6 +8,10 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+app.get("/", (req, res) => {
+  res.json({ message: "server is running" });
+});
+
 // Middleware
 app.use(cors());
 app.use(express.json());
